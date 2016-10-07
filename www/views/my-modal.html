@@ -1,0 +1,19 @@
+<script id="pregunta-modal.html" type="text/ng-template">
+	<ion-modal-view>
+		<ion-header-bar class="bar-positive header-color">
+			<h1 class="title">Pregunta de Seguridad</h1>
+			<button class="button transparent" ng-click="modal.hide()">Cancelar</button>
+		</ion-header-bar>
+		<ion-content class="padding margn-top-20">
+			<p style="text-align: center;">¿'+pregunta+'?</p>
+			<form role="form" style="padding-top: 10px;">
+				<ion-list>
+					<label class="item item-input" ion-item>
+						<input type="text" placeholder="¿'+pregunta+'?" ng-model="formData.responder"/>
+					</label>
+				</ion-list>
+				<button class="button transparent" ng-click="responder(formData)">Responder</button>
+			</form>
+		</ion-content>
+	</ion-modal-view>
+</script>

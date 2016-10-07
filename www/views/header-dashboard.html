@@ -1,0 +1,76 @@
+ <ion-side-menus enable-menu-with-back-views="true" class="">
+        <ion-side-menu side="right">
+          <ion-header-bar class="bar-light ">
+            <h1 class="title">Menu</h1>
+          </ion-header-bar>
+          <ion-content class="intermenu">
+            <ion-list>
+        <div ng-repeat="group in menu">
+          <ion-item class="item-stable" ng-click="{{group.click}}" menu-close>
+             <!-- <i class="icon" <!-- ng-class="isGroupShown(group) ? 'ion-ios-circle-filled' : 'ion-ios-circle-outline'"></i> -->
+             <span ng-click="{{group.click}}" >{{group.name}}</span>
+          </ion-item>
+        </div>
+      </ion-list>
+        </ion-side-menu>
+        
+        <ion-side-menu-content>
+          <ion-nav-bar class="bar-light header-color">
+            <ion-nav-back-button class="button-clear header-color"
+                ng-click="myGoBack()">
+                <!-- <i class="ion-arrow-left-c" style=""></i> Volver -->
+                <button class="button icon ion-ios-arrow-left transparent" ng-click="myGoBack()" style="color: white;">Atr&aacute;s</button>
+                
+              </ion-nav-back-button>
+            <ion-nav-buttons side="right" class="header-color">
+              <button class="button button-icon button-clear icon ion-ios-gear-outline transparent" menu-toggle="right" style="color:white;"></button>
+            </ion-nav-buttons>
+          </ion-nav-bar>
+          <ion-nav-view name="menuContent" ></ion-nav-view>
+<ion-subheader-bar class="bar bar-subheader relative header-color" style="z-index:10;">
+	<div class="jc-item-avatar">
+		<img data-ng-src="{{image}}" ng-src="{{image}}" data-err-src="images/logo.png" class="">
+	</div>
+</ion-subheader-bar>
+  	
+  	<ion-subheader-bar class="bar bar-subheader relative header-color" style="    border-bottom: 1px solid #47c4f5 !important;">
+  	<div class="row">
+  		<div class="col">Posic&iacute;on Consolidada</div>
+  		<div class="col" style="text-align: right;">
+  			45.000 bs <button class="button icon ion-ios-arrow-right btr-r transparent"></button>
+  		</div>
+	</div>
+  	</ion-subheader-bar>
+  	
+<ion-tabs class="hidden tabs-icon-top tabs-striped ">
+	<ion-tab title="Actividad" href="#/hdas/dashboard">
+		<ion-nav-view name="hdas-dashboard"></ion-nav-view>
+	</ion-tab>
+	
+	<ion-tab title="Cartera" href="#/hdas/cartera">
+		<ion-nav-view name="hdas-cartera"></ion-nav-view>
+	</ion-tab>
+
+	<ion-tab title="Pagos y Cobros" href="#/hdas/pagos-cobros">
+		<ion-nav-view name="hdas-pagos-cobros"></ion-nav-view>
+	</ion-tab>
+</ion-tabs>
+          
+        </ion-side-menu-content> 
+
+      </ion-side-menus>
+
+
+
+
+
+
+<!-- <ion-header-bar class="super bar bar-header header-color">
+  <button class="button icon ion-ios-arrow-left transparent" ng-click="atras()">Atr&aacute;s</button>
+  <button class="button icon ion-ios-gear-outline transparent"></button>
+  
+  <button class="button button-icon button-clear icon ion-ios-gear-outline transparent" menu-toggle="right"></button>
+</ion-header-bar>
+ -->
+
+

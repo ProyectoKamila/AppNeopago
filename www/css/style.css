@@ -1,0 +1,131 @@
+/* Empty. Add your own CSS if you like */
+
+
+.button-neo-login.button.button-stable, .jc-buttom{
+    background: #ff7e00;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 6px !important;
+}
+.button-neo-login.button.disabled,
+.button-neo-login.button[disabled]{
+	/* opacity: 1 !important; */
+    background-color: white !important;
+    color: #ff7e00 !important;
+	
+}
+.jc-popup {
+    background: rgba(000,000,000,0.6);
+}
+.jc-popup .popup .popup-body {
+    text-align: justify;
+    padding: 10px 20px;
+}
+.jc-input-indent{
+	text-indent: 0px !important;
+}
+.login-view .formulario, .formularioRecuperar {
+    max-width: 450px;
+}
+
+/* .button:hover {
+    color: white !important;
+    text-decoration: none;
+} */
+
+.jc-popup.recover .popup-body span {
+    text-align: center;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.jc-popup.recover .popup-body input {
+    border-bottom: solid 1px #b7b7b7;
+    border-left: solid 1px #b7b7b7;
+    background: transparent !important;
+    padding-left: 10px;
+}
+
+.jc-popup.recover .popup-buttons .button.button-positive {
+    background: #ff7e00;
+    color:white;
+}
+
+.jc-popup.recover .popup-buttons .button.button-default {
+}
+/* .hidden .tab-nav.tabs {
+    height: 0px !important;
+	border: 0px !important;
+}
+.hidden ion-content.padding.scroll-content.ionic-scroll.overflow-scroll.has-tabs-top {
+    top: 40px !important;
+} */
+
+.transparent {
+    border-color: transparent !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+.transparent:hover {
+    color: white !important;
+}
+button.button.icon.ion-ios-gear-outline:before {
+    font-size: 30px;
+}
+
+button.button.icon.ion-ios-arrow-left.transparent:before {
+    font-size: 25px;
+    padding-right: 9px;
+}
+
+.super.bar{
+	height: auto !important;
+}
+.header-color, .hidden .tab-nav.tabs{
+	background: #0098d4 !important;
+	border-bottom: none !important;
+    background-color: #0098d4 !important;
+}
+.header-color *, .hidden .tab-nav.tabs * {
+    color: white;
+}
+.item-active.amarillo{
+	color:#b3d40d;
+}
+.hidden a.tab-item.tab-item-active, .hidden a.tab-item.activated {
+    border-color: #b3d40d;
+}
+.dashboard-fondo{
+	    background: #00629f !important;
+}
+.dashboard-fondo *{
+	    color:white !important;
+}
+	
+.hidden a.tab-item.tab-item-active span, .hidden a.tab-item.activated span {
+    color: #b3d40d;
+}
+.margn-top-20{
+    margin: 20px 0;
+}
+.relative{
+	position:relative !important;
+}
+.btr-r:before{
+	line-height: 20px !important;
+}
+div.jc-item-avatar {
+    display: block;
+    margin: 0 auto;
+    margin-top: -35px;
+    border: 3px solid #d0d0d0;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+}
+div.jc-item-avatar img{
+	max-width: 100%;
+	height: auto;
+	
+}

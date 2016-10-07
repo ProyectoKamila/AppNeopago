@@ -1,0 +1,104 @@
+<ion-view class='login-view'>
+ <ion-content >
+
+ <div class="div-transparente">
+
+ <div class="logo">
+     <div class="row">
+         <div class="col"><img ng-src="images/logo.png" class="img-responsive"></div>
+     </div>
+ </div>
+</div>
+
+
+<div class="tabs" ng-class="tabmove"> 
+  <a class="tab-item tab1" ng-hide="tab1" ng-click="recuperarSalir(); tabmove=''">
+    Entrar
+  </a>
+  <a class="tab-item tab2"  ng-hide="tab2" ng-click="entrarSalir(); tabmove='move-tab'">
+    Recuperar
+  </a>
+</div>
+
+
+     <div class="formulario"> 
+     <div class="row" ng-hide="formulario"> 
+  <div class="col">
+    <form name="login">
+      <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label"><i class="ion-ios-person-outline"></i></span>
+        <input type="number" placeholder="RIF" class="user jc-input-indent" autocomplete="false" ng-model="formData.rif" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label"><i class="ion-ios-locked-outline"></i></span>
+        <input type="password" placeholder="CONTRASEÑA" class="jc-input-indent" autocomplete="false" ng-model="formData.password" required>
+      </label>
+        <button class="button button-full button-stable button-neo-login" ng-click="iniciar(formData)"  ng-disabled="!login.$valid" >
+            Ingresar
+        </button>        
+    </div>   
+</form>
+</div>
+</div>
+</div>  
+
+<div ng-hide="recuperar" class="formularioRecuperar">
+  <div class="row" ng-hide="formularioRecuperar"> 
+  <div class="col">
+    <form name="loginRecuperar">
+      <div class="list">
+      <!-- <label class="item item-input item-floating-label">
+        <span class="input-label"><i class="icon ion-ios-person-outline"></i></span>
+        <input type="number" placeholder="RIF" class="user jc-input-indent" autocomplete="false" ng-model="formData.pregunta" required>
+      </label> -->
+      <label class="item item-input item-floating-label">
+        <span class="input-label"><i class="icon ion-ios-email-outline"></i></span>
+        <input type="email" placeholder="CORREO ELECTR&Oacute;NICO" class="jc-input-indent" autocomplete="false" ng-model="formData.respuesta" required>
+      </label>
+        <input type="text" placeholder="{{ss}}" class="jc-input-indent" autocomplete="false" ng-model="formData.pr" >
+        <button class="button button-full button-stable button-neo-login" ng-click="consultar(formData)"  ng-disabled="!loginRecuperar.$valid" >
+            Consultar
+        </button>        
+    </div>   
+</form>
+</div>
+</div>
+</div>
+
+</ion-content>
+</ion-view>
+
+
+<script id="pregunta-modal.html" type="text/ng-template">
+	<ion-modal-view>
+		<ion-header-bar class="bar-positive ">
+			<h1 class="title">Pregunta de Seguridad</h1>
+			<button class="button transparent" ng-click="modal.hide()">Cancelar</button>
+		</ion-header-bar>
+		<ion-content class="padding margn-top-20">
+			<p style="text-align: center;">¿{{pregunta}}?</p>
+			<form role="form" style="padding-top: 10px;">
+				<ion-list>
+					<label class="item item-input" ion-item>
+						<input type="text" placeholder="¿{{pregunta}}?" ng-model="formData.responder"/>
+					</label>
+				</ion-list>
+				<button class="button button-full button-stable button-neo-login" ng-click="responder(formData)">Responder</button>
+			</form>
+		</ion-content>
+	</ion-modal-view>
+</script>
+
+<script id="response.html" type="text/ng-template">
+	<ion-modal-view>
+		<ion-header-bar class="bar-positive ">
+			<h1 class="title">Pregunta de Seguridad</h1>
+			<button class="button transparent" ng-click="modal1.hide()">Cancelar</button>
+		</ion-header-bar>
+		<ion-content class="padding margn-top-20">
+			<p style="text-align: center;">{{respuesta}}</p>
+				<button class="button button-full button-stable button-neo-login" ng-click="continuar()">Continuar</button>
+		</ion-content>
+	</ion-modal-view>
+</script>
